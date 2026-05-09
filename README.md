@@ -20,6 +20,19 @@ Minimal JavaScript full-stack app:
    - `npm run dev`
 4. Open `http://localhost:3000`.
 
+## Run with Docker Compose
+
+1. Open `docker-compose.yml` and set your values in `services.app.environment`:
+   - `DATABASE_URL`
+   - `PORT`
+   - optional `DB_SSL` and `DB_SSL_REJECT_UNAUTHORIZED`
+2. Build and start:
+   - `docker compose up --build -d`
+3. View logs:
+   - `docker compose logs -f app`
+4. Stop:
+   - `docker compose down`
+
 ## Deploy on Coolify (same project)
 
 Create one application in your Coolify project:

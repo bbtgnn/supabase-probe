@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: supabase-probe-app
+    ports:
+      - "5555:3000"
+    environment:
+      PORT: "3000"
+      DATABASE_URL: "postgresql://postgres:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@127.0.0.1:5432/postgres"
+      DB_SSL: "false"
+      DB_SSL_REJECT_UNAUTHORIZED: "true"
+    restart: unless-stopped
