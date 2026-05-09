@@ -8,7 +8,7 @@ services:
       - "5555:3000"
     environment:
       PORT: "3000"
-      DATABASE_URL: "postgresql://postgres:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@host.docker.internal:6543/postgres?pgbouncer=true"
+      DATABASE_URL: "postgresql://postgres.dev_tenant:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@host.docker.internal:6543/postgres?pgbouncer=true"
       DIRECT_URL: "postgresql://postgres:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@host.docker.internal:5432/postgres"
       DB_SSL: "false"
       DB_SSL_REJECT_UNAUTHORIZED: "true"
