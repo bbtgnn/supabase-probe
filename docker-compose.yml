@@ -7,11 +7,11 @@ services:
     ports:
       - "5555:3000"
     environment:
-      PORT: "3000"
-      DATABASE_URL: "postgresql://postgres.dev_tenant:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@host.docker.internal:6543/postgres?pgbouncer=true"
-      DIRECT_URL: "postgresql://postgres:AXxH23D1kJuuKanrGeYeN3AChXqm4hCI@host.docker.internal:5432/postgres"
-      DB_SSL: "false"
-      DB_SSL_REJECT_UNAUTHORIZED: "true"
+      PORT: "${PORT:-3000}"
+      DATABASE_URL: "${DATABASE_URL}"
+      DIRECT_URL: "${DIRECT_URL}"
+      DB_SSL: "${DB_SSL:-false}"
+      DB_SSL_REJECT_UNAUTHORIZED: "${DB_SSL_REJECT_UNAUTHORIZED:-true}"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped
